@@ -11,6 +11,7 @@ from schema import Optional, Schema
 parser = argparse.ArgumentParser()
 parser.add_argument("--check", action="store_true") # whether to open every entry in browser for viewing
 parser.add_argument("--pprint", action="store_true") # whether to pretty print the schema after formatting
+parser.add_argument("--push", action="store_true") # whether to automatically push the changes after updating
 args = parser.parse_args()
 
 file = open("catlist.csv", "r")
@@ -37,7 +38,8 @@ for line in lines:
 	except: # not an entry log line
 		pass
 entries.remove("0")
-print(f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries.")
+message = f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries."
+print(message)
 
 file = open("catlist.csv", "a")
 if old_length > 0: # only write new entries
@@ -84,3 +86,9 @@ if args.pprint:
 file = open("milenko-list.json", "w")
 file.write(json.dumps(json_schema))
 file.close()
+
+
+if args.push: 
+	os.system("git add catlist.csv milenko-list.json")
+	os.system(f"git commit -m \"{message}\"")
+	os.system("git push")
