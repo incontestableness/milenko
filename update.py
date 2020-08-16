@@ -14,6 +14,9 @@ file.close()
 catlist = catlist.split(",")
 old_length = len(catlist)
 
+# grab the latest log of bot steamids
+os.system("cp /tmp/`ls -t /tmp | grep cathook.*[0-9]\\.log | head -n 1` log.txt")
+
 file = open("log.txt", "r")
 log = file.read()
 file.close()
