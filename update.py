@@ -35,7 +35,7 @@ for line in lines:
 	except: # not an entry log line
 		pass
 entries.remove("0")
-x.sort()
+entries.sort()
 message = f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries."
 print(message)
 
