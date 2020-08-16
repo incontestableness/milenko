@@ -71,7 +71,7 @@ for entry in entries:
 data["players"] = catlist
 
 file = open("milenko-list.json", "w")
-file.write(pprint.pformat(data))
+file.write(json.dumps(data))
 file.close()
 
 
