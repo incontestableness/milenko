@@ -12,10 +12,10 @@ parser.add_argument("--check", action="store_true") # whether to open every entr
 parser.add_argument("--push", action="store_true") # whether to automatically push the changes after updating
 args = parser.parse_args()
 
-file = open("catlist.csv", "r")
+file = open("catlist.nsv", "r")
 catlist = file.read()
 file.close()
-catlist = catlist.split(",")
+catlist = catlist.split("\n")
 catlist.remove("")
 old_length = len(catlist)
 
@@ -35,6 +35,7 @@ for line in lines:
 	except: # not an entry log line
 		pass
 entries.remove("0")
+x.sort()
 message = f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries."
 print(message)
 
@@ -43,13 +44,13 @@ if old_length > 0: # only write new entries
 	for entry in entries[old_length:]:
 		if args.check:
 			os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
-		file.write(f"{entry},")
+		file.write(f"{entry}\n")
 	file.close()
 else: # write all
 	for entry in entries:
 		if args.check:
 			os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
-		file.write(f"{entry},")
+		file.write(f"{entry}\n")
 	file.close()
 
 
