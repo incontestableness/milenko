@@ -10,6 +10,7 @@ from schema import Optional, Schema
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--check", action="store_true") # whether to open every entry in browser for viewing
+parser.add_argument("--pprint", action="store_true") # whether to pretty print the schema after formatting
 args = parser.parse_args()
 
 file = open("catlist.csv", "r")
@@ -78,7 +79,8 @@ data["players"] = catlist
 
 s = Schema(data)
 json_schema = s.json_schema("https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json")
-pprint.pprint(json_schema, width=200)
+if args.pprint:
+	pprint.pprint(json_schema, width=200)
 file = open("milenko-list.json", "w")
 file.write(json.dumps(json_schema))
 file.close()
