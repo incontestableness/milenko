@@ -18,8 +18,7 @@ file = open("catlist.csv", "r")
 catlist = file.read()
 file.close()
 catlist = catlist.split(",")
-while "" in catlist:
-	catlist.remove("")
+catlist.remove("")
 old_length = len(catlist)
 
 # grab the latest log of bot steamids
