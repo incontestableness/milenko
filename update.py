@@ -4,7 +4,6 @@ import argparse
 import json
 import os
 import pprint
-from schema import Optional, Schema
 
 
 
