@@ -17,7 +17,9 @@ file = open("catlist.csv", "r")
 catlist = file.read()
 file.close()
 catlist = catlist.split(",")
-old_length = len(catlist) - 1 # since there's a trailing comma
+while "" in catlist:
+	catlist.remove("")
+old_length = len(catlist)
 
 # grab the latest log of bot steamids
 os.system("cp /tmp/`ls -t /tmp | grep cathook.*[0-9]\\.log | head -n 1` log.txt")
@@ -39,7 +41,7 @@ print(f"Added {len(entries) - old_length} entries. There are now {len(entries)} 
 
 file = open("catlist.csv", "a")
 if old_length > 0: # only write new entries
-	for entry in entries[old_length - 1:]:
+	for entry in entries[old_length:]:
 		if args.check:
 			os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
 		file.write(f"{entry},")
