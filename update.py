@@ -69,10 +69,6 @@ for entry in entries:
 	catlist.append({
 			"steamid": f"[U:1:{entry}]",
 			"attributes": ["cheater"],
-			"last_seen": {
-				"player_name": "",
-				"time": 0
-				}
 			})
 
 data = basic_info
