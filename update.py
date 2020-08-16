@@ -77,9 +77,9 @@ data["players"] = catlist
 s = Schema(data)
 json_schema = s.json_schema("https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json")
 if args.pprint:
-	pprint.pprint(json_schema, width=200)
+	pprint.pprint(json_schema)
 file = open("milenko-list.json", "w")
-file.write(json.dumps(json_schema))
+file.write(pprint.pformat(json_schema))
 file.close()
 
 
