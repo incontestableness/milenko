@@ -10,7 +10,6 @@ from schema import Optional, Schema
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--check", action="store_true") # whether to open every entry in browser for viewing
-parser.add_argument("--pprint", action="store_true") # whether to pretty print the schema after formatting
 parser.add_argument("--push", action="store_true") # whether to automatically push the changes after updating
 args = parser.parse_args()
 
@@ -55,13 +54,12 @@ else: # write all
 	file.close()
 
 
-basic_info = {
-	"file_info": {
-			"authors": ["milenko"],
-			"description": "List of automatically detected cathook users",
-			"title": "Milenko's cathook list",
-			"update_url": ""
-			}
+data = {"$schema": "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json"}
+data["file_info"] = {
+                     "authors": ["milenko"],
+                     "description": "List of automatically detected cathook users",
+                     "title": "Milenko's cathook list",
+                     "update_url": "https://incontestableness.github.io/catlist/milenko-list.json"
 }
 
 catlist = []
@@ -71,15 +69,10 @@ for entry in entries:
 			"attributes": ["cheater"],
 			})
 
-data = basic_info
 data["players"] = catlist
 
-s = Schema(data)
-json_schema = s.json_schema("https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json")
-if args.pprint:
-	pprint.pprint(json_schema)
 file = open("milenko-list.json", "w")
-file.write(pprint.pformat(json_schema))
+file.write(pprint.pformat(data))
 file.close()
 
 
