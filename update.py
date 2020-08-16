@@ -27,8 +27,6 @@ log = file.read()
 file.close()
 
 lines = log.split("\n")
-while "" in lines:
-	lines.remove("")
 
 entries = []
 for line in lines:
