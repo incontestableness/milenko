@@ -31,7 +31,9 @@ lines = log.split("\n")
 entries = []
 for line in lines:
 	try:
-		entries.append(line.split("Bot steamid entry: ")[1])
+		entry = line.split("Bot steamid entry: ")[1]
+		if entry not in entries:
+			entries.append(entry)
 	except: # not an entry log line
 		pass
 entries.remove("0")
