@@ -27,7 +27,10 @@ while "" in lines:
 
 entries = []
 for line in lines:
-	entries.append(line.split(": ")[1])
+	try:
+		entries.append(line.split("Bot steamid entry: ")[1])
+	except: # not an entry log line
+		pass
 entries.remove("0")
 
 file = open("catlist.csv", "a")
