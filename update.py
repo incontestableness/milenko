@@ -12,12 +12,15 @@ parser.add_argument("--check", action="store_true") # whether to open every entr
 parser.add_argument("--push", action="store_true") # whether to automatically push the changes after updating
 args = parser.parse_args()
 
-file = open("catlist.nsv", "r")
-catlist = file.read()
-file.close()
-catlist = catlist.split("\n")
-catlist.remove("")
-old_length = len(catlist)
+try:
+	file = open("catlist.nsv", "r")
+	catlist = file.read()
+	file.close()
+	catlist = catlist.split("\n")
+	catlist.remove("")
+	old_length = len(catlist)
+except FileNotFoundError:
+	old_length = 0
 
 # grab the latest log of bot steamids
 os.system("cp /tmp/`ls -t /tmp | grep cathook.*[0-9]\\.log | head -n 1` log.txt")
@@ -41,20 +44,16 @@ entries.sort()
 message = f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries."
 print(message)
 
-os.remove("catlist.nsv")
+try:
+	os.remove("catlist.nsv")
+except FileNotFoundError:
+	pass
 file = open("catlist.nsv", "a")
-if old_length > 0: # only write new entries
-	for entry in entries[old_length:]:
-		if args.check:
-			os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
-		file.write(f"{entry}\n")
-	file.close()
-else: # write all
-	for entry in entries:
-		if args.check:
-			os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
-		file.write(f"{entry}\n")
-	file.close()
+for entry in entries:
+	if args.check:
+		os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
+	file.write(f"{entry}\n")
+file.close()
 
 
 data = {"$schema": "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json"}
