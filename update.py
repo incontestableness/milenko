@@ -41,6 +41,7 @@ entries.sort()
 message = f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries."
 print(message)
 
+os.remove("catlist.nsv")
 file = open("catlist.nsv", "a")
 if old_length > 0: # only write new entries
 	for entry in entries[old_length:]:
