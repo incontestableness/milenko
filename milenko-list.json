@@ -6,7 +6,7 @@
         ],
         "description": "List of automatically detected cathook users",
         "title": "Milenko's cathook list",
-        "update_url": "https://incontestableness.github.io/catlist/milenko-list.json"
+        "update_url": "https://incontestableness.github.io/milenko/milenko-list.json"
     },
     "players": [
         {
@@ -155,6 +155,12 @@
         },
         {
             "steamid": "[U:1:1056892977]",
+            "attributes": [
+                "cheater"
+            ]
+        },
+        {
+            "steamid": "[U:1:1057127936]",
             "attributes": [
                 "cheater"
             ]
