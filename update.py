@@ -81,7 +81,7 @@ for entry in entries:
 data["players"] = catlist
 
 # write the json
-file = open("milenko-list.json", "w")
+file = open("playerlist.milenko-list.json", "w")
 file.write(json.dumps(data, indent=4))
 file.close()
 
