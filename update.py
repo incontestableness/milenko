@@ -68,7 +68,7 @@ data["file_info"] = {
                      "authors": ["milenko"],
                      "description": "List of automatically detected cathook users",
                      "title": "Milenko's cathook list",
-                     "update_url": "https://incontestableness.github.io/milenko/milenko-list.json"
+                     "update_url": "https://incontestableness.github.io/milenko/playerlist.milenko-list.json"
 }
 
 catlist = []
