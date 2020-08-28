@@ -88,6 +88,6 @@ file.close()
 
 # update the repo
 if args.push: 
-	os.system("git add catlist.nsv milenko-list.json")
+	os.system("git add catlist.nsv playerlist.milenko-list.json")
 	os.system(f"git commit -m \"{message}\"")
 	os.system("git push")
