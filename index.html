@@ -16,58 +16,82 @@
 	<body>
 		<h2>What is Milenko?</h2>
 		<p>
-			"Milenko's Bot Detector" is an "anti-bot bot" (yes, really...) that helps to remove malicious bots from Team Fortress 2 casual matches by detecting, reporting, votekicking, and killing them in the interim.<br>
+			"Milenko's Bot Detector" is an <strong>"anti-bot bot"</strong> <i>(yes, really...)</i> that helps to remove malicious bots from Team Fortress 2 casual matches by detecting, reporting, votekicking, and killing them in the interim.<br>
 			In other words, Milenko bots are "Friendly Botkillers".<br>
 			Their name stems from the song <a href="https://www.youtube.com/watch?v=KAU54CvzCwg">"The Great Milenko" by Insane Clown Posse.</a><br>
 		</p>
-    
-		<h2>Will the botkillers leave once all the malicious bots are kicked from the match?</h2>
-		<p><strong>Yes, they will.</strong> They stay in every new match for a brief period (about 10 seconds after setup time ends) to detect malicious bots, but they will leave automatically. <strong>You do not need to kick them!</strong></p>
+
+		<h2>What does Milenko do?</h2>
+		<ul>
+			<li>Milenko bots join casual matches in Team Fortress 2 and automatically detect malicious bots.</li>
+			<li>Milenko bots will join as the spy class and "spycrab" in the spawn room.</li>
+			<li>When a malicious bot is detected in a match, Milenko switches to the sniper class and targets these bots.</li>
+			<li>Milenko bots will <strong>only kill malicious bots.</strong></li>
+			<li>This helps to prevent malicious bots from ruining the fun of innocent players and makes it more obvious when malicious bots are present.</li><br>
+
+			<li>Premium Milenko bots will announce a list of the malicious bots on each team in the chat periodically.</li>
+			<li>This makes it <strong>much</strong> easier for teams to coordinate votekicks on malicious bots.</li><br>
+
+			<li>When possible (not on 2 minute votekick cooldown), premium milenko bots will automatically call votekicks against malicious bots on the same team.</li><br>
+
+			<li>They will also inform players in chat <strong>whether or not the player being kicked is a known bot.</strong></li>
+			<li>This helps to prevent innocent players from being kicked by malicious bots or other players.</li>
+			<li>When a votekick is called, Milenko bots will automatically vote Yes on malicious bots and No on regular players.</li><br>
+		</ul>
+
+		<h2>Will Milenko bots leave once all the malicious bots are kicked from the match?</h2>
+		<p><strong>Yes, they will.</strong> They stay in every new match for a brief period (about 15 seconds after setup time ends) to detect malicious bots, but they will leave automatically. <strong>You do not need to kick them!</strong></p>
 
 		<h2>How can I tell the difference between Milenko and malicious bots?</h2>
-		<p>Milenko has some unique features and behaviors that can help to distinguish them from malicious bots:</p>
+		<p>Milenko bots have some features and behaviors that can help to distinguish them from malicious bots:</p>
 		<ul>
-			<li>Milenko bots will join as the spy class and "spycrab" in the spawn room.</li>
-			<li>When a malicious bot is detected, they will switch to the sniper class and target them.</li>
-			<li>Milenko bots will <strong>only kill malicious bots.</strong></li>
-			<li>When a votekick is called, Milenko bots will automatically vote Yes on malicious bots and No on regular players.</li>
-			<li>Most Milenko bots will not wear any cosmetic items.</li>
+			<li>About half of Milenko bots will not wear any cosmetic items due to not being premium.</li>
+			<li>When no malicious bots are detected, Milenko bots will "explode" before leaving.</li>
 		</ul>
-		<p><strong>Milenko bots that have been upgraded to premium will:</strong></p>
+		<p>Milenko bots that have been upgraded to premium will:</p>
 		<ul>
-			<li>Announce a list of current malicious bots in the chat periodically</li>
-			<li>Automatically call votekicks against malicious bots on the same team</li>
-			<li>When votekicks are called, they will announce in chat whether that player is a bot</li>
-			<li>When a malicious bot is detected, Milenko bots will say "Sentry ahead!" periodically as a warning</li>
-			<li>Perform the Disco Fever taunt when they join</li>
-			<li>Wear the Mann Co. hat</li>
+			<li><strong>Perform the Disco Fever taunt when they join</strong></li>
+			<li><strong>Always wear the Mann Co. hat</strong></li>
+			<li>When a malicious bot is detected, Milenko bots will say "Sentry ahead!" every 15 seconds as a warning</li>
 		</ul>
+
+		<h2>Okay, but what do <i>malicious bots</i> look like?</h2>
+		<p>Please read <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1935994199">this guide</a> for more information on how to identify common malicious bots.</p>
 
 		<h2>How can I help get rid of malicious bots?</h2>
 		<p>
 			You can download <a href="https://github.com/PazerOP/tf2_bot_detector">PazerOP's TF2 Bot Detector</a>, a program that helps to identify malicious bots and automatically kick them.<br>
-			<strong>We now have our own list of malicious bots which you can add to the tool!</strong> You can <a href="https://incontestableness.github.io/milenko/playerlist.milenko-list.json">download it here!</a><br>
-			This list is 100% accurate - there is no way for a legitimate player to get added to the list unless they use a cheat.
+			<br>
+			<strong>We have our own list of malicious bots which you can add to the tool.</strong><br>
+			This list is 100% accurate and only contains malicious bots. There is no way for a legitimate player to get added to the list.<br>
+			<br>
+			You can download Milenko's playerlist <a href="https://incontestableness.github.io/milenko/playerlist.milenko-list.json">here!</a><br>
+			Read PazerOP's TF2 Bot Detector <a href="https://github.com/PazerOP/tf2_bot_detector/wiki/Customization#third-party-player-lists">wiki page</a> for information on how to add the list to the tool. (Save the playerlist file and move it to the bot detector "cfg" folder)
 		</p>
 
 		<h2>Do you have a Discord server or something?</h2>
-		<p><strong>Yup.</strong> Click the connect button in the widget below or use this link: <a href="https://discord.gg/UsZM3Kw">https://discord.gg/UsZM3Kw</a></p>
-		<iframe src="https://ptb.discordapp.com/widget?id=747262810748092486&theme=light" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-		<h2>Hosting the botkillers costs money.</h2>
 		<p>
-			For every $6 ($4.99 + $0.41 tax + ~$0.46 PayPal fees; extra ~$0.14 goes towards next bot) received, a botkiller can be upgraded to TF2 premium.<br>
-			This will allow the bot to call votekicks, use chat to identify malicious bots, and more!<br>
-			If you would like to donate directly to the developer, please say so in your message when donating! These donations will be used to cover hosting costs.<br>
-			<a href="https://ko-fi.com/milenko">Please consider donating here.</a> All donations are not-for-profit.<br>
+			<strong>Yup.</strong> Click the connect button in the widget below or use this link: <a href="https://discord.gg/UsZM3Kw">https://discord.gg/UsZM3Kw</a><br>
+			We use the server to post updates on development, accept feedback, and other stuff. Go check it out if you're interested.
+		</p>
+		<iframe src="https://ptb.discordapp.com/widget?id=747262810748092486&theme=light" width="300" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+		<h2>It costs my time and money to host the Milenko bots. Please consider donating.</h2>
+		<p>
+			Donations go towards funding development of the project as well as covering hosting costs. <a href="https://ko-fi.com/milenko">Please donate here.</a><br>
+			With enough donations, we can migrate to a stable server and run the bots 24/7.<br>
+			<br>
+			There are currently 10 premium Milenko bots. Premium Milenko bots can call votekicks, use chat to identify malicious bots, and more.<br>
+			<ul>
+				<li>When there are enough hosting resources, the "Disco Fever" taunt will be bought from the in-game store to upgrade more bots to TF2 premium.</li>
+				<li>It costs about $6 in donations ($4.99 + $0.41 tax + ~$0.46 PayPal fees) to upgrade a bot.</li>
+			</ul>
+			As of 09/05/2020, 13 more bots are due to be upgraded to premium.<br>
+			This will take some time, as I have to manually create each email account, steam account, and log in to each and buy a taunt from the in-game store.<br>
+			Due to ratelimits and such, this could take multiple weeks.<br>
 			<br>
 			Bitcoin donations are also welcome: 35ASdQQ55ALDU9NSu2unTcRzYe9LckG6M5<br>
-			Alternatively, you can send to this bip32 address for reduced transaction fees: bc1q728r5n9mkeege7783tzhqgcayy8s44qwhwllsz<br>
-			<br>
-			Premium Milenko bots: 10<br>
-			Number of bots that are due to be upgraded to premium: 13<br>
-			This will take some time, as I have to manually create each email account, steam account, and log in to each and buy a taunt from the in-game store.<br>
-			Due to ratelimits and such, this could take multiple weeks.
+			If your Bitcoin wallet supports it, you should send to this bip32 address instead for reduced transaction fees: bc1q728r5n9mkeege7783tzhqgcayy8s44qwhwllsz
 		</p>
 	</body>
 </html>
