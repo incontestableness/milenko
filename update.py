@@ -61,7 +61,7 @@ if args.check:
 # Compile the json
 data = {"$schema": "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json"}
 data["file_info"] = {
-                     "authors": ["milenko"],
+                     "authors": ["The Great Milenko"],
                      "description": "List of automatically detected cathook users",
                      "title": "Milenko's cathook list",
                      "update_url": "https://incontestableness.github.io/milenko/playerlist.milenko-list.json"
