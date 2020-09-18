@@ -13,56 +13,51 @@ parser.add_argument("--push", action="store_true") # whether to automatically pu
 args = parser.parse_args()
 
 
-# get old size for counting new entries
-try:
-	file = open("catlist.nsv", "r")
-	catlist = file.read()
-	file.close()
-	catlist = catlist.split("\n")
-	catlist.remove("")
-	old_length = len(catlist)
-except FileNotFoundError:
-	old_length = 0
+# Load current database
+file = open("catlist.nsv", "r")
+catlist = file.read()
+file.close()
+catlist = catlist.split("\n")
+catlist.remove("")
+old_length = len(catlist)
 
-# grab the latest log of bot steamids
+# Grab the latest log of bot steamids
 os.system("cp /tmp/`ls -t /tmp | grep cathook.*[0-9]\\.log | head -n 1` log.txt")
-
-# generate entry list
 file = open("log.txt", "r")
 log = file.read()
 file.close()
 
+# Add new entries to the database from the log's plist dump
 lines = log.split("\n")
-entries = []
+new_entries = []
 for line in lines:
 	try:
 		entry = line.split("Bot steamid entry: ")[1]
-		if entry not in entries:
-			entries.append(entry)
+		if entry == "0": # invalid steamid
+			continue
+		if entry not in catlist:
+			catlist.append(entry)
+			new_entries.append(entry)
 	except: # not an entry log line
 		pass
-entries.remove("0")
-entries.sort()
-message = f"Added {len(entries) - old_length} entries. There are now {len(entries)} entries."
+catlist.sort()
+message = f"Added {len(new_entries)} entries. There are now {len(catlist)} entries."
 print(message)
 
-# write entries to nsv file
-try:
-	os.remove("catlist.nsv")
-except FileNotFoundError:
-	pass
+# Write updated database to file
+os.remove("catlist.nsv")
 file = open("catlist.nsv", "a")
-for entry in entries:
+for entry in catlist:
 	file.write(f"{entry}\n")
 file.close()
 
-# check new steamids
+# Check new steamids
 if args.check:
-	for entry in entries[old_length:]:
+	for entry in new_entries:
 		os.system(f"~/Desktop/Firefox-Developer-Edition/firefox https://steamid.xyz/{entry}")
 
 
-# compile the json
+# Compile the json
 data = {"$schema": "https://raw.githubusercontent.com/PazerOP/tf2_bot_detector/master/schemas/v3/playerlist.schema.json"}
 data["file_info"] = {
                      "authors": ["milenko"],
@@ -71,23 +66,24 @@ data["file_info"] = {
                      "update_url": "https://incontestableness.github.io/milenko/playerlist.milenko-list.json"
 }
 
-catlist = []
-for entry in entries:
-	catlist.append({
+playerlist = []
+for entry in catlist:
+	playerlist.append({
 			"steamid": f"[U:1:{entry}]",
 			"attributes": ["cheater"],
 			})
 
-data["players"] = catlist
+data["players"] = playerlist
 
-# write the json
+
+# Write the json
 file = open("playerlist.milenko-list.json", "w")
 file.write(json.dumps(data, indent=4))
 file.close()
 
 
-# update the repo
-if args.push: 
+# Update the repo
+if args.push:
 	os.system("git add catlist.nsv playerlist.milenko-list.json")
 	os.system(f"git commit -m \"{message}\"")
 	os.system("git push")
