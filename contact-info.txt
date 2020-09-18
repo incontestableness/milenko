@@ -1,0 +1,66 @@
+Greetings.
+
+I can be reached via e-mail at whyistherumg0ne [at] protonmail.com
+Please encrypt your communications with my PGP public key and provide your own key if you want a proper response.
+
+To prevent spam, you will need to brute force a MD5 hash and include the key anywhere in the e-mail subject line.
+This can be done using the following command line, and would take approximately 1-2 days on my PC with 12 threads.
+hashcat --attack-mode=3 --hash-type=0 --custom-charset1=?l hashfile.txt ?1?1?1?1?1?1?1?1?1?1 -O
+
+E-mails that do not include the key of 10 lowercase letters in the subject line will be filtered out using ProtonMail's wonderful Sieve filter functionality.
+If someone were to crack the hash and then send spam, I would only need to generate a new key/hash and update the filter and this file.
+The current MD5 hash is: b4e828c50892235ab42a2f4f17f885fa
+
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+xX9HGbSo8HYe4saDYLA=
+=bK7l
+-----END PGP PUBLIC KEY BLOCK-----
