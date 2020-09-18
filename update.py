@@ -9,6 +9,7 @@ import pprint
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--check", action="store_true") # whether to open every entry in browser for viewing
+parser.add_argument("--commit", action="store_true") # whether to automatically commit the changes after updating
 parser.add_argument("--push", action="store_true") # whether to automatically push the changes after updating
 args = parser.parse_args()
 
@@ -83,7 +84,8 @@ file.close()
 
 
 # Update the repo
-if args.push:
+if args.commit:
 	os.system("git add catlist.nsv playerlist.milenko-list.json")
 	os.system(f"git commit -m \"{message}\"")
+if args.push:
 	os.system("git push")
