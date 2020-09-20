@@ -30,7 +30,7 @@ excludes = excludes.split("\n")
 excludes.remove("")
 
 # Grab the latest log of bot steamids
-os.system("cp /tmp/`ls -t /tmp | grep cathook.*[0-9]\\.log | head -n 1` log.txt")
+os.system("cp /tmp/`ls -t /tmp | grep -E cathook-[a-z]{4}-[0-9]*.log | head -n 1` log.txt")
 file = open("log.txt", "r")
 log = file.read()
 file.close()
