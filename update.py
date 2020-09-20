@@ -22,6 +22,13 @@ catlist = catlist.split("\n")
 catlist.remove("")
 old_length = len(catlist)
 
+# Load exclusion database
+file = open("excludes.nsv", "r")
+excludes = file.read()
+file.close()
+excludes = excludes.split("\n")
+excludes.remove("")
+
 # Grab the latest log of bot steamids
 os.system("cp /tmp/`ls -t /tmp | grep cathook.*[0-9]\\.log | head -n 1` log.txt")
 file = open("log.txt", "r")
@@ -36,7 +43,7 @@ for line in lines:
 		entry = line.split("Bot steamid entry: ")[1]
 		if entry == "0": # invalid steamid
 			continue
-		if entry not in catlist:
+		if entry not in catlist and entry not in excludes:
 			catlist.append(entry)
 			new_entries.append(entry)
 	except: # not an entry log line
