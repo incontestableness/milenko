@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import pprint
+import sys
 
 
 
@@ -96,3 +97,5 @@ if args.commit:
 	os.system(f"git commit -m \"{message}\"")
 if args.push:
 	os.system("git push")
+	sys.stdout.write("\nhttps://github.com/incontestableness/milenko/commit/")
+	os.system("git rev-parse HEAD")
