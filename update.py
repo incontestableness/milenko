@@ -78,9 +78,9 @@ data["file_info"] = {
 playerlist = []
 for entry in catlist:
 	playerlist.append({
-			"steamid": f"[U:1:{entry}]",
-			"attributes": ["cheater"],
-			})
+		"steamid": f"[U:1:{entry}]",
+		"attributes": ["cheater"],
+	})
 
 data["players"] = playerlist
 
