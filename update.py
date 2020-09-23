@@ -161,6 +161,6 @@ if args.live_scrape:
 		time.sleep(60) # update every minute
 else:
 	entry_list = user_dump()
-	message = update_database(entry_list)
+	message = update_db(entry_list)
 	commit(message)
 	push()
