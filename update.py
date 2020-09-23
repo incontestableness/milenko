@@ -60,6 +60,9 @@ for entry in catlist:
 	file.write(f"{entry}\n")
 file.close()
 
+# Copy updated database so bots can use it
+os.system("cp -v catlist.nsv /opt/cathook/data/")
+
 # Check new steamids
 if args.check:
 	for entry in new_entries:
