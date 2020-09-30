@@ -10,7 +10,7 @@ tmux a -t live-scrape
 
 # Delete all cathook logs so the entry doesn't get picked back up
 pushd /tmp
-rm cathook-*.log
+sudo rm cathook-*.log
 popd
 
 # Delete the cathook plist file since I am NOT editing that binary crap from here
