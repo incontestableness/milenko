@@ -115,23 +115,24 @@ def user_dump():
 # Used in live-scrape mode to auto-update the playerlist periodically without manually dumping the plist
 def scrape():
 	live_entries = []
-	filenames = glob.glob("/tmp/cathook-[a-z][-a-z0-9_]*-[0-9]*.log")
+	bot_filenames = glob.glob("/tmp/cathook-[a-z][-a-z0-9_]{11}-[0-9][0-9]?-[0-9]*.log")
+	user_filenames = glob.glob("/tmp/cathook-[a-z]{4}-[0-9]*.log")
+	filenames = bot_filenames + user_filenames
 	print(filenames)
 	for fname in filenames:
-		if "segfault" not in fname:
-			print(f"Reading {fname}")
-			file = open(fname, "r", encoding="ISO-8859-1")
-			data = file.read()
-			file.close()
+		print(f"Reading {fname}")
+		file = open(fname, "r", encoding="ISO-8859-1")
+		data = file.read()
+		file.close()
 
-			data = data.split("\n")
-			for line in data:
-				try:
-					entry = line.split("NEW bot steamid entry: ")[1]
-					if entry not in live_entries: # might as well de-duplicate here
-						live_entries.append(entry)
-				except: # not an entry log line
-					pass
+		data = data.split("\n")
+		for line in data:
+			try:
+				entry = line.split("NEW bot steamid entry: ")[1]
+				if entry not in live_entries: # might as well de-duplicate here
+					live_entries.append(entry)
+			except: # not an entry log line
+				pass
 	return live_entries
 
 
