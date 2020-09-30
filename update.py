@@ -161,7 +161,7 @@ if args.live_scrape:
 		commit(message)
 		push()
 		time.sleep(60) # update every minute
-else if args.playerlist_only:
+elif args.playerlist_only:
 	update_db([])
 	commit("Update the playerlist")
 else:
