@@ -33,4 +33,4 @@ git show
 
 # Verify that the entry was removed from the playerlist
 git show
-echo "Ready to push commits..."
+echo -e "\nReady to push commits..."
