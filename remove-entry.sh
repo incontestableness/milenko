@@ -29,7 +29,7 @@ git commit -m "Remove an entry"
 git show
 
 # Update the playerlist
-./update.py --playerlist-only
+./update.py --playerlist-only --commit
 
 # Verify that the entry was removed from the playerlist
 git show
