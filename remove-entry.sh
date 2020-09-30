@@ -25,12 +25,12 @@ mv catlist_new.nsv catlist.nsv
 git add catlist.nsv
 git commit -m "Remove an entry"
 
-# Verify
+# Verify that the entry was removed from the database
 git show
 
-# Update playerlist
-./update.py
+# Update the playerlist
+./update.py --playerlist-only
 
-# Verify
+# Verify that the entry was removed from the playerlist
 git show
 echo "Ready to push commits..."
