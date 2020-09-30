@@ -11,6 +11,7 @@ import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--live-scrape", action="store_true") # auto-update the playerlist periodically
+parser.add_argument("--playerlist-only", action="store_true") # just rewrite the playerlist based on the current database
 parser.add_argument("--check", action="store_true") # open each new entry in the browser for viewing
 parser.add_argument("--commit", action="store_true") # commit database/playerlist changes
 parser.add_argument("--push", action="store_true") # automatically push the changes after updating
@@ -160,6 +161,9 @@ if args.live_scrape:
 		commit(message)
 		push()
 		time.sleep(60) # update every minute
+else if args.playerlist_only:
+	update_db([])
+	commit("Update the playerlist")
 else:
 	entry_list = user_dump()
 	message = update_db(entry_list)
