@@ -59,8 +59,6 @@ def generate_playerlist():
 
 
 def update_db(entry_list):
-	old_length = len(database)
-
 	new_entries = []
 	for entry in entry_list:
 		if entry == "0": # invalid steamid
