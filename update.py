@@ -92,24 +92,6 @@ def update_db(entry_list):
 	return message
 
 
-# Reads the latest user log containing a dump of plist bot steamids and returns them as a list
-def user_dump():
-	os.system("cp /tmp/`ls -t /tmp | grep -E cathook-[a-z]{4}-[0-9]*.log | head -n 1` log.txt")
-	file = open("log.txt", "r")
-	log = file.read()
-	file.close()
-
-	lines = log.split("\n")
-	entry_list = []
-	for line in lines:
-		try:
-			entry = line.split("Bot steamid entry: ")[1]
-			entry_list.append(entry)
-		except: # not an entry log line
-			pass
-	return entry_list
-
-
 # Scrapes all logs for new bot steamids
 # Used in live-scrape mode to auto-update the playerlist periodically without manually dumping the plist
 def scrape():
@@ -164,7 +146,7 @@ elif args.playerlist_only:
 	update_db([])
 	commit("Update the playerlist")
 else:
-	entry_list = user_dump()
+	entry_list = scrape()
 	message = update_db(entry_list)
 	commit(message)
 	push()
