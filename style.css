@@ -1,8 +1,15 @@
 body {
 	background-color: #121212;
+	font-family: "Courier New";
 	color: #E00050;
 }
 
-a {
+.underlined_link {
 	color: #40C0FF;
+	text-decoration: underline;
+}
+
+.jumbotron {
+	background-color: #121212;
+	padding: 2rem;
 }
