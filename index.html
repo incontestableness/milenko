@@ -27,7 +27,7 @@
 	<body>
 		<!-- Actually implementing web design is an abstract kind of hell -->
 		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #262626;">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="index.html">
 				<img src="favicon.ico" width="64" height="64" class="d-inline-block" alt="">
 				The Great Milenko
 			</a>
@@ -36,7 +36,8 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 				<div class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<a class="nav-item nav-link active" href="#">Home</a>
+					<a class="nav-item nav-link active" href="index.html">Home</a>
+					<a class="nav-item nav-link active" href="faq.html">Frequently Asked Questions</a>
 					<a class="nav-item nav-link" href="https://discord.gg/UsZM3Kw">Discord Server</a>
 					<a class="nav-item nav-link" href="https://ko-fi.com/milenko">Donations Page</a>
 				</div>
@@ -48,7 +49,7 @@
 			<p>
 				"Milenko's Bot Detector" is an <strong>"anti-bot bot"</strong> <i>(yes, really...)</i> that helps to remove malicious bots from Team Fortress 2 casual matches by detecting, reporting, votekicking, and killing them in the interim.<br>
 				In other words, Milenko bots are "Friendly Botkillers".<br>
-				Their name stems from the song <a class=underlined_link href="https://www.youtube.com/watch?v=KAU54CvzCwg">"The Great Milenko" by Insane Clown Posse</a>.<br>
+				Their name stems from the song <a class="underlined-link" href="https://www.youtube.com/watch?v=KAU54CvzCwg">"The Great Milenko" by Insane Clown Posse</a>.
 			</p>
 
 			<h2>What does Milenko do?</h2>
@@ -67,65 +68,28 @@
 				<li>When a votekick is called, they will also inform players in chat <strong>whether or not the player being kicked is a known bot.</strong></li>
 				<li>This helps to prevent innocent players from being kicked by malicious bots or other players.</li>
 				<li>Milenko bots will automatically vote Yes on malicious bots and No on regular players.</li>
-			</ul>
-
-			<h2>Will Milenko bots leave once all the malicious bots are kicked from the match?</h2>
-			<p>
-				<strong>Yes, they will.</strong> They stay in every new match for a brief period (about 15 seconds after setup time ends) to detect malicious bots, but they will leave automatically.<br>
-				Since Milenko bots leave automatically, there is no need to kick them.<br>
-				Trying to kick a Milenko bot only puts you on a 2 minute votekick cooldown and prevents you from kicking an actual malicious bot when one joins.
-			</p>
-
-			<h2>Do Milenko bots "take up" player slots?</h2>
-			<p>
-				<strong>No.</strong> Only one Milenko bot will be in a given match at a time, for merely 15 seconds, unless there is a malicious bot.<br>
-				<a class=underlined_link href="https://www.youtube.com/watch?v=Mj00ii1BLV8">That still leaves 23 player slots for you</a> during those 15 seconds.<br>
 				<br>
-				Milenko's goal is to kick malicious bots back into the matchmaking queue as soon as possible.<br>
-				The less time a malicious bot is in a match, the better.
-			</p>
-
-			<h2>How can I tell the difference between Milenko and malicious bots?</h2>
-			<p>Please read <a class=underlined_link href="https://steamcommunity.com/sharedfiles/filedetails/?id=1935994199">this guide</a> for basic information on how to identify common malicious bots.</p>
-			<p>Here's a few more things that can help to distinguish Milenko bots from malicious bots:</p>
-			<ul>
-				<li>Some malicious bots use Milenko's old profile picture (see <a class=underlined_link href="favicon.ico">here</a>) in an attempt to impersonate them.</li>
-				<li>Malicious bots may also try to impersonate Milenko bots by using names like "Milenko's Bot Detector" and the like.</li>
-				<li><strong>REAL</strong> Milenko bots will use a <strong>random default TF2 avatar</strong> and a <strong>random name.</strong></li>
-				<br>
-				<li>Milenko bots will not wear any cosmetic items except for the Mann Co. hat.</li>
-				<li>When a malicious bot is detected, Milenko bots will say "Sentry ahead!" every 15 seconds as a warning.</li>
-				<li>After killing the last malicious bot on the other team, Milenko bots will taunt with "The Director's Vision".</li>
-				<li>When no malicious bots are detected, Milenko bots will "explode" before leaving.</li>
+				<li>If there are no bots detected after about 15 seconds, Milenko bots will <strong>leave automatically.</strong></li>
 			</ul>
 
 			<h2>How can I help get rid of malicious bots?</h2>
 			<p>
-				You can download <a class=underlined_link href="https://github.com/PazerOP/tf2_bot_detector">PazerOP's TF2 Bot Detector</a>, a program that helps to identify malicious bots and automatically kick them.<br>
+				You can download <a class="underlined-link" href="https://github.com/PazerOP/tf2_bot_detector">PazerOP's TF2 Bot Detector</a>, a program that helps to identify malicious bots and automatically kick them.<br>
 				<br>
 				<strong>We have our own list of malicious bots which you can add to the tool.</strong><br>
 				This list is 100% accurate and only contains malicious bots. There is no way for a legitimate player to get added to the list.<br>
 				<br>
-				You can download Milenko's playerlist <a class=underlined_link href="https://incontestableness.github.io/milenko/playerlist.milenko-list.json">here!</a><br>
-				Read PazerOP's TF2 Bot Detector <a class=underlined_link href="https://github.com/PazerOP/tf2_bot_detector/wiki/Customization#third-party-player-lists">wiki page</a> for information on how to add the list to the tool. (Save the playerlist file and move it to the bot detector "cfg" folder)
-			</p>
-
-			<h2>Do you have a Discord server or something?</h2>
-			<p>
-				<strong>Yup.</strong> Click the connect button in the widget below or use this link: <a class=underlined_link href="https://discord.gg/UsZM3Kw">https://discord.gg/UsZM3Kw</a><br>
-				We use the server to post updates on development, accept feedback, and other stuff. Go check it out if you're interested.
-			</p>
-			<iframe src="https://ptb.discordapp.com/widget?id=747262810748092486&theme=dark" width="350" height="350" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-			<h2>Do you have an alternative point of contact?</h2>
-			<p>
-				Yeah. If you know what you're doing you can shoot me an e-mail encrypted using PGP.
-				<a class=underlined_link href="contact-info.txt">Click here for advanced contact information.</a>
+				You can download Milenko's playerlist <a class="underlined-link" href="https://incontestableness.github.io/milenko/playerlist.milenko-list.json">here!</a><br>
+				Read PazerOP's TF2 Bot Detector <a class="underlined-link" href="https://github.com/PazerOP/tf2_bot_detector/wiki/Customization#third-party-player-lists">wiki page</a> for information on how to add the list to the tool. (Save the playerlist file and move it to the bot detector "cfg" folder)
 			</p>
 
 			<h2>It costs my time and money to develop and host the Milenko bots. Please consider donating.</h2>
 			<p>
-				Donations go towards covering hosting costs as well as development. <a class=underlined_link href="https://ko-fi.com/milenko">Please consider donating just $6 here.</a><br>
+				Less than 1% of players who visit the site choose to donate.<br>
+				Currently, I can only run the milenko bots for some hours of the day. Running them 24/7 would cost about <strong>$150 per month.</strong><br>
+				Donations go towards covering hosting costs as well as development. <a class="underlined-link" href="https://ko-fi.com/milenko">Please consider donating just $12 here.</a><br>
+				<i>(If you're feeling generous, note that you can also specify a custom amount.)</i><br>
+				<br>
 				With enough donations, we can migrate to a stable server and run the Milenko bots 24/7.<br>
 				<br>
 				There are currently a dozen premium Milenko bots. Premium Milenko bots can call votekicks, use chat to identify malicious bots, and more.<br>
@@ -138,6 +102,13 @@
 				<br>
 				If you would prefer to donate Monero, you can send to this address: 83bvucMFZh72A5BrEeaNBAeZnfbrAdcGNME9o9mydnjsc1rhDK4st5MHdg1qguXrpf4Sf67dcyNmy6TrKZ9eeTVd5h5Chn7
 			</p>
+
+			<h2>Do you have a Discord server or something?</h2>
+			<p>
+				<strong>Yup.</strong> Click the connect button in the widget below or use this link: <a class="underlined-link" href="https://discord.gg/UsZM3Kw">https://discord.gg/UsZM3Kw</a><br>
+				We use the server to post updates on development, accept feedback, and other stuff. Go check it out if you're interested.
+			</p>
+			<iframe src="https://ptb.discordapp.com/widget?id=747262810748092486&theme=dark" width="350" height="350" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
 			<h2>Thanks, and have fun.</h2>
 		</div>
