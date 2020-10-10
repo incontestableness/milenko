@@ -77,6 +77,7 @@ def update_db(entry_list):
 	# Write updated database to file
 	os.remove("catlist.nsv")
 	file = open("catlist.nsv", "a")
+	database.sort()
 	for entry in database:
 		file.write(f"{entry}\n")
 	file.close()
