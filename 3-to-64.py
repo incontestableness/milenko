@@ -6,7 +6,7 @@ import os
 import subprocess
 
 
-print("This will take a long time, be patient.")
+print("This will take a few minutes, be patient.")
 
 file = open("catlist.nsv", "r")
 data = file.read()
