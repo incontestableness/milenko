@@ -1,15 +1,15 @@
 Greetings.
 
 I can be reached via e-mail at whyistherumg0ne [at] protonmail.com
-Please encrypt your communications with my PGP public key and provide your own key if you want a proper response.
+Please encrypt your communications with my PGP public key and provide your own key if the message is sensitive.
 
 To prevent spam, you will need to brute force a MD5 hash and include the key anywhere in the e-mail subject line.
-This can be done using the following command line, and would take approximately 1-2 days on my PC with 12 threads.
+This can be done using the following command line, and takes about 10 minutes on my PC with 12 threads.
 hashcat --attack-mode=3 --hash-type=0 --custom-charset1=?l hashfile.txt ?1?1?1?1?1?1?1?1?1?1 -O
 
-E-mails that do not include the key of 10 lowercase letters in the subject line will be filtered out using ProtonMail's wonderful Sieve filter functionality.
+E-mails that do not include the key of 8 lowercase letters in the subject line will be filtered out using ProtonMail's wonderful Sieve filter functionality.
 If someone were to crack the hash and then send spam, I would only need to generate a new key/hash and update the filter and this file.
-The current MD5 hash is: b4e828c50892235ab42a2f4f17f885fa
+The current MD5 hash is: 8e8684a1ae5a36f75251d5f250fe32f7
 
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
