@@ -4,9 +4,9 @@
         "authors": [
             "The Great Milenko"
         ],
-        "description": "List of automatically detected cathook users",
-        "title": "Milenko's cathook list",
-        "update_url": "https://incontestableness.github.io/milenko/playerlist.milenko-legacy.json"
+        "description": "Milenko's recommended cumulative playerlist",
+        "title": "Milenko's cumulative list",
+        "update_url": "https://incontestableness.github.io/milenko-lists/playerlist.milenko-cumulative.json"
     },
     "players": [
         {
