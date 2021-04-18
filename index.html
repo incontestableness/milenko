@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang=en>
-	<!-- Minimized HTML/CSS/JS is for cowards -->
+<html>
 	<head>
-		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176252591-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -11,108 +9,14 @@
 			gtag('config', 'UA-176252591-1');
 		</script>
 
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-		<!-- Take a wild guess -->
-		<title>The Great Milenko</title>
-		<link href="style.css" rel="stylesheet" type="text/css" media="all">
+		<title>Redirecting...</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+		<meta http-equiv="refresh" content="0; URL=http://milenko.ml/"/>
 	</head>
-
 	<body>
-		<!-- Actually implementing web design is an abstract kind of hell -->
-		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #262626;">
-			<a class="navbar-brand" href="index.html">
-				<img src="favicon.ico" width="64" height="64" class="d-inline-block" alt="">
-				The Great Milenko
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-				<div class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<a class="nav-item nav-link active" href="index.html">Home (You are here)</a>
-					<a class="nav-item nav-link active" href="faq.html">Frequently Asked Questions</a>
-					<a class="nav-item nav-link" href="https://discord.gg/UsZM3Kw">Discord Server</a>
-					<a class="nav-item nav-link" href="https://www.patreon.com/milenko">Donations Page</a>
-				</div>
-			</div>
-		</nav>
+		<h1>Redirecting...</h1>
 
-		<div class="jumbotron">
-			<h2>What is Milenko?</h2>
-			<p>
-				<strong>"Milenko"</strong> is an <strong>"anti-bot bot"</strong> that helps to remove malicious bots from Team Fortress 2 casual matches by detecting, reporting, votekicking, and killing them in the interim.<br>
-				The project is named after the song <a class="underlined-link" href="https://www.youtube.com/watch?v=KAU54CvzCwg">"The Great Milenko" by Insane Clown Posse</a>.
-			</p>
-
-			<h2>What does Milenko do?</h2>
-			<ul>
-				<li>Milenko bots join casual matches in Team Fortress 2 and automatically detect malicious bots.</li>
-				<li>Milenko bots will join as the Spy class and perform either the Disco Fever or Luxury Lounge taunt in the spawn room.</li>
-				<br>
-				<li>If a malicious bot is detected in the match, Milenko bots will:</li>
-				<ol>
-					<li>Announce a list of the malicious bots on each team in the chat every 20 seconds</li>
-					<li>Try to call vote kicks on these bots as soon as possible</li>
-					<li>Switch to the Sniper class and target <strong>only</strong> these malicious bots</li>
-				</ol>
-				<li>This helps to prevent malicious bots from ruining the fun of innocent players and makes it immediately obvious when malicious bots are present.</li>
-				<br>
-				<li>When a votekick is called, they will also inform players in chat <strong>whether or not the player being kicked is a known bot.</strong></li>
-				<li>This helps to prevent innocent players from being kicked by malicious bots or other players.</li>
-				<li>Milenko bots will automatically vote Yes on malicious bots and No on regular players.</li>
-				<br>
-				<li>If there are no bots detected after about 15 seconds, Milenko bots will <strong>leave automatically.</strong></li>
-				<li>You don't need to kick Milenko - focus your efforts on malicious bots instead.</li>
-			</ul>
-
-			<h2>How can I help get rid of malicious bots?</h2>
-			<p>
-				I strongly encourage that you use PazerOP's TF2 Bot Detector, a program that helps to identify malicious bots and <strong>automatically kick them!</strong><br>
-				You can download his program from GitHub <a class="underlined-link" href="https://github.com/PazerOP/tf2_bot_detector">here</a>.<br>
-				<br>
-				I also maintain my own list of malicious bots which you can add to the tool.<br>
-				This list is extremely accurate and contains mostly malicious bots. A few cheaters using cathook are also on the list.<br>
-				<br>
-				Malicious bots and cathook users are automatically detected using signals that they broadcast to everyone in the game.<br>
-				Certain bots that tend to use the same name (e.g. "<i>irc.myg0t.gg:6667#myg0t</i>") are detected by their in-game name. If you're dumb enough to set your name to the name of a bot, players will kick you. As such, it's reasonable that Milenko should add you to the list as well. If you think you got added by mistake, just join the Discord server and send a message to <strong>The Great Milenko#6950</strong> (that's me), and I'll remove you from the list.<br>
-				<br>
-				You can download Milenko's playerlist <a class="underlined-link" href="https://incontestableness.github.io/milenko/playerlist.milenko-list.json">here</a>.<br>
-				Read PazerOP's TF2 Bot Detector <a class="underlined-link" href="https://github.com/PazerOP/tf2_bot_detector/wiki/Customization#third-party-player-lists-and-rules">wiki page</a> for information on how to add the list to the tool. (Just save the playerlist file and move it to the bot detector "cfg" folder.)
-			</p>
-
-			<h2>Do you have a Discord server or something?</h2>
-			<p>
-				<strong>Yup.</strong> Click the connect button in the widget below or use this invite link: <a class="underlined-link" href="https://discord.gg/UsZM3Kw">https://discord.gg/UsZM3Kw</a><br>
-				I use the server to post updates on development, accept feedback, provide real-time statistics, and more. Go check it out if you're interested.
-			</p>
-			<iframe src="https://ptb.discordapp.com/widget?id=747262810748092486&theme=dark" width="350" height="350" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-			<h2>It costs my time and money to develop and host the Milenko bots. Please consider donating.</h2>
-			<p>
-				Less than 1% of players who visit the site decide to donate.<br>
-				Please consider subscribing to my Patreon <a class="underlined-link" href="https://www.patreon.com/milenko">here</a>.<br>
-				<br>
-				Currently, I can only run the Milenko bots for some hours of the day, using my own PC. Running them 24/7 in the cloud would cost <strong>over $150 per month.</strong><br>
-				They also only run in North America for now. Europe has the same problem with bots. With enough donations, I can move the project to two cloud servers that serve both regions, but this would cost twice as much.<br>
-				<br>
-				Bitcoin donations are also welcome: 35ASdQQ55ALDU9NSu2unTcRzYe9LckG6M5<br>
-				If your Bitcoin wallet supports it, you should send to this bip32 address instead for reduced transaction fees: bc1q728r5n9mkeege7783tzhqgcayy8s44qwhwllsz<br>
-				If you would prefer to donate Monero, you can send to this address: 83bvucMFZh72A5BrEeaNBAeZnfbrAdcGNME9o9mydnjsc1rhDK4st5MHdg1qguXrpf4Sf67dcyNmy6TrKZ9eeTVd5h5Chn7
-			</p>
-
-			<h2>Thanks, and have fun.</h2>
-		</div>
-
-		<!-- Bootstrap dependencies -->
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<h2>If you are not automatically redirected, please click <a href="http://milenko.ml/">here.</a></h2>
 	</body>
 </html>
